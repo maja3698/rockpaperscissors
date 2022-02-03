@@ -54,6 +54,10 @@ function showRock() {
   document.querySelector("#player2").classList.remove("rock");
 
   document.querySelector("#win").classList.remove("hidden")
+
+  document.querySelector(".rock").removeEventListener("click", showShakeRock);
+  document.querySelector(".paper").removeEventListener("click", showShakePaper);
+  document.querySelector(".scissors").removeEventListener("click", showShakeScissors);
   
   console.log("rock");
   setTimeout(() => {
@@ -72,6 +76,10 @@ function showPaper() {
   document.querySelector("#player2").classList.remove("rock");
   document.querySelector("#lose").classList.remove("hidden")
 
+  document.querySelector(".rock").removeEventListener("click", showShakeRock);
+  document.querySelector(".paper").removeEventListener("click", showShakePaper);
+  document.querySelector(".scissors").removeEventListener("click", showShakeScissors);
+
   console.log("paper");
   setTimeout(() => {
     window.location.reload();
@@ -88,6 +96,10 @@ function showScissors() {
   document.querySelector("#player2").classList.remove("paper");
   document.querySelector("#player2").classList.remove("rock");
   document.querySelector("#draw").classList.remove("hidden")
+
+  document.querySelector(".rock").removeEventListener("click", showShakeRock);
+  document.querySelector(".paper").removeEventListener("click", showShakePaper);
+  document.querySelector(".scissors").removeEventListener("click", showShakeScissors);
   
 
   console.log("scissors");
